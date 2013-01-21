@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E10061EC16ADA4A100EDD9E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10061EB16ADA4A100EDD9E3 /* Foundation.framework */; };
-		E10061F116ADA4A100EDD9E3 /* UIKitHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E10061F016ADA4A100EDD9E3 /* UIKitHelpers.h */; };
-		E10061F316ADA4A100EDD9E3 /* UIKitHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E10061F216ADA4A100EDD9E3 /* UIKitHelpers.m */; };
+		E100621D16ADAA9900EDD9E3 /* UIView+FrameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E100621C16ADAA9900EDD9E3 /* UIView+FrameHelpers.m */; };
+		E100621F16ADAB0D00EDD9E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E100621E16ADAB0D00EDD9E3 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,7 +19,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				E10061F116ADA4A100EDD9E3 /* UIKitHelpers.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29,8 +28,10 @@
 		E10061E816ADA4A100EDD9E3 /* libUIKitHelpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUIKitHelpers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10061EB16ADA4A100EDD9E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E10061EF16ADA4A100EDD9E3 /* UIKitHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKitHelpers-Prefix.pch"; sourceTree = "<group>"; };
-		E10061F016ADA4A100EDD9E3 /* UIKitHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitHelpers.h; sourceTree = "<group>"; };
-		E10061F216ADA4A100EDD9E3 /* UIKitHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitHelpers.m; sourceTree = "<group>"; };
+		E100621B16ADAA9900EDD9E3 /* UIView+FrameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FrameHelpers.h"; path = "Classes/UIView+FrameHelpers.h"; sourceTree = SOURCE_ROOT; };
+		E100621C16ADAA9900EDD9E3 /* UIView+FrameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FrameHelpers.m"; path = "Classes/UIView+FrameHelpers.m"; sourceTree = SOURCE_ROOT; };
+		E100621E16ADAB0D00EDD9E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E100622016ADAB1700EDD9E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E100621F16ADAB0D00EDD9E3 /* UIKit.framework in Frameworks */,
 				E10061EC16ADA4A100EDD9E3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,6 +50,8 @@
 		E10061DD16ADA4A100EDD9E3 = {
 			isa = PBXGroup;
 			children = (
+				E100622016ADAB1700EDD9E3 /* CoreGraphics.framework */,
+				E100621E16ADAB0D00EDD9E3 /* UIKit.framework */,
 				E10061ED16ADA4A100EDD9E3 /* UIKitHelpers */,
 				E10061EA16ADA4A100EDD9E3 /* Frameworks */,
 				E10061E916ADA4A100EDD9E3 /* Products */,
@@ -73,8 +77,7 @@
 		E10061ED16ADA4A100EDD9E3 /* UIKitHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				E10061F016ADA4A100EDD9E3 /* UIKitHelpers.h */,
-				E10061F216ADA4A100EDD9E3 /* UIKitHelpers.m */,
+				E100621116ADAA2100EDD9E3 /* Classes */,
 				E10061EE16ADA4A100EDD9E3 /* Supporting Files */,
 			);
 			path = UIKitHelpers;
@@ -86,6 +89,15 @@
 				E10061EF16ADA4A100EDD9E3 /* UIKitHelpers-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E100621116ADAA2100EDD9E3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E100621B16ADAA9900EDD9E3 /* UIView+FrameHelpers.h */,
+				E100621C16ADAA9900EDD9E3 /* UIView+FrameHelpers.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E10061F316ADA4A100EDD9E3 /* UIKitHelpers.m in Sources */,
+				E100621D16ADAA9900EDD9E3 /* UIView+FrameHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +209,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/UIKitHelpers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UIKitHelpers/UIKitHelpers-Prefix.pch";
+				GCC_PREFIX_HEADER = "UIKitHelpers-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -209,7 +221,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/UIKitHelpers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UIKitHelpers/UIKitHelpers-Prefix.pch";
+				GCC_PREFIX_HEADER = "UIKitHelpers-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -235,6 +247,7 @@
 				E10061F816ADA4A100EDD9E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
