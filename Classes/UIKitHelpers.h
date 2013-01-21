@@ -6,8 +6,4 @@
 //  Copyright (c) 2013 Fernando Mazzon. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface UIKitHelpers : NSObject
-
-@end
+#import "UIView+FrameHelpers.h"

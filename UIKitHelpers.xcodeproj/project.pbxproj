@@ -32,6 +32,7 @@
 		E100621C16ADAA9900EDD9E3 /* UIView+FrameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FrameHelpers.m"; path = "Classes/UIView+FrameHelpers.m"; sourceTree = SOURCE_ROOT; };
 		E100621E16ADAB0D00EDD9E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E100622016ADAB1700EDD9E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E100622916ADABE200EDD9E3 /* UIKitHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIKitHelpers.h; path = Classes/UIKitHelpers.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		E100621116ADAA2100EDD9E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E100622916ADABE200EDD9E3 /* UIKitHelpers.h */,
 				E100621B16ADAA9900EDD9E3 /* UIView+FrameHelpers.h */,
 				E100621C16ADAA9900EDD9E3 /* UIView+FrameHelpers.m */,
 			);
